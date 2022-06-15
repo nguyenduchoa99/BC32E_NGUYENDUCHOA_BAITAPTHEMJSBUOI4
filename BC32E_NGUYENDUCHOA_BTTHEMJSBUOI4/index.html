@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div>
+        <div class="container d-flex justify-content-center pt-5">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="pill" href="#baitap5">Bài 5</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#baitap6">Bài 6</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#baitap7">Bài 7</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#baitap8">Bài 8</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane container active" id="baitap5">
+                <div class="bai5 m-5 p-5 container">
+                    <h1>Tính ngày tháng năm</h1>
+                    <div class="d-flex justify-content-center pt-5">
+                        <input class="form-control w-25" id="ngay" type="number" placeholder="Nhập ngày" />
+                        <input class="form-control w-25" id="thang" type="number" placeholder="Nhập tháng" />
+                        <input class="form-control w-25" id="nam" type="number" placeholder="Nhập năm" />
+                    </div>
+                    <div class="text-center p-5">
+                        <button class="btn btn-dark" id="btnNgayHomQua">Ngày Hôm Qua</button>
+                        <button class="btn btn-dark" id="btnNgayMai">Ngày Mai</button>
+                    </div>
+                    <div class="text-center p-5">
+                        <h3 id="ketQuaBai5">
+                            Ngày:
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane container fade" id="baitap6">
+                <div class="bai6 m-5 p-5 container">
+                    <h1>Tính Ngày</h1>
+                    <div class="d-flex justify-content-center pt-5">
+                        <input class="form-control w-25" id="inputThang" type="number" placeholder="Nhập Tháng" />
+                        <input class="form-control w-25" id="inputNam" type="number" placeholder="Nhập Năm" />
+                    </div>
+                    <div class="text-center p-5">
+                        <button class="btn btn-dark" id="btnTinhNgay">Tính Ngày</button>
+                    </div>
+                    <div class="text-center p-5">
+                        <h3 id="ketQuaBai6">
+                            Là:
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane container fade" id="baitap7">
+                <div class="bai7 m-5 p-5 container">
+                    <h1>Đọc số</h1>
+                    <div class="d-flex justify-content-center pt-5">
+                        <input class="form-control w-25" id="nhapSo" type="number" placeholder="Nhập số có 3 chữ số"
+                            min="100" max="999" />
+                    </div>
+                    <div class="text-center p-5">
+                        <button id="btnDocSo" class="btn btn-dark">Đọc Số</button>
+                    </div>
+                    <div class="text-center p-5">
+                        <h3 id="ketQuaBai7">
+                            Đọc:
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane container fade" id="baitap8">
+                <div class="bai8 m-5 p-5 container">
+                    <h1>Tìm sinh viên xa trường nhất</h1>
+                    <div class="row pt-5 thongTin">
+                        <div class="col-12">
+                            <h4>Sinh Viên 1</h4>
+                        </div>
+                        <div class="d-flex justify-content-center p-2">
+                            <input class="form-control w-25" id="sinhVien1" placeholder="Nhập tên" />
+                            <input class="form-control w-25" id="toaDoX1" type="number" placeholder="Nhập tọa độ x" />
+                            <input class="form-control w-25" id="toaDoY1" type="number" placeholder="Nhập tọa độ y" />
+                        </div>
+                        <div class="col-12">
+                            <h4>Sinh Viên 2</h4>
+                        </div>
+                        <div class="d-flex justify-content-center p-2">
+                            <input class="form-control w-25" id="sinhVien2" placeholder="Nhập tên" />
+                            <input class="form-control w-25" id="toaDoX2" type="number" placeholder="Nhập tọa độ x" />
+                            <input class="form-control w-25" id="toaDoY2" type="number" placeholder="Nhập tọa độ y" />
+                        </div>
+                        <div class="col-12">
+                            <h4>Sinh Viên 3</h4>
+                        </div>
+                        <div class="d-flex justify-content-center p-2">
+                            <input class="form-control w-25" id="sinhVien3" placeholder="Nhập tên" />
+                            <input class="form-control w-25" id="toaDoX3" type="number" placeholder="Nhập tọa độ x" />
+                            <input class="form-control w-25" id="toaDoY3" type="number" placeholder="Nhập tọa độ y" />
+                        </div>
+                        <div class="col-12">
+                            <h4>Trường Học</h4>
+                        </div>
+                        <div class="d-flex justify-content-center truongHoc pt-2">
+                            <input class="form-control w-50" id="toaDoX4" type="number" placeholder="Nhập tọa độ x" />
+                            <input class="form-control w-50" id="toaDoY4" type="number" placeholder="Nhập tọa độ y" />
+                        </div>
+                    </div>
+                    <div class="text-center p-5">
+                        <button class="btn btn-dark" id="btnTim">Tìm</button>
+                    </div>
+                    <div class="text-center">
+                        <h3 id="ketQuaBai8">
+                            Sinh viên xa trường nhất:
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

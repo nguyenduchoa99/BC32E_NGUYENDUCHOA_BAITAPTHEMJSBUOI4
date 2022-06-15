@@ -1,0 +1,89 @@
+h1 {
+    color: #fff;
+    text-align: center;
+}
+
+h3 {
+    color: #fff;
+}
+
+.bai5 {
+    background-image: url(../img/111.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    border-radius: 25px;
+}
+
+.bai5 input {
+    margin-right: 10px;
+}
+
+.bai5 .btn {
+    padding: 10px 30px;
+    margin-right: 30px;
+    border-radius: 25px;
+}
+
+.bai6 {
+    background-image: url(../img/111.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    border-radius: 25px;
+}
+
+.bai6 input {
+    margin-right: 10px;
+}
+
+.bai6 .btn {
+    padding: 10px 30px;
+    border-radius: 25px;
+}
+
+.bai7{
+    background-image: url(../img/111.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    border-radius: 25px;
+}
+
+.bai7 .btn {
+    padding: 10px 30px;
+    border-radius: 25px;
+}
+
+.bai8{
+    background-image: url(../img/111.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    border-radius: 25px;
+}
+
+.bai8 .btn {
+    padding: 10px 30px;
+    border-radius: 25px;
+}
+
+.bai8 input{
+    margin-right: 10px;
+}
+
+.bai8 .truongHoc{
+    padding-left:70px ;
+}
+h4{
+    color: #fff;
+}
+
+.bai8 .thongTin{
+    padding-left: 200px;
+}
+
