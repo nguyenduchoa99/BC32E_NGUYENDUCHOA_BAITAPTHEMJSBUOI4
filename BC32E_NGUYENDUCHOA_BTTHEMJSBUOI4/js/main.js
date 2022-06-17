@@ -1,3 +1,18 @@
+/**
+ * Bài 5: Tính ngày tháng năm
+ * Mô hình 3 khối:
+ * - Input:
+ *      + ngay: Number, thang: Number, nam: Number
+ * -Xử lý: 
+ *      + sử dụng switch case  để xác định từng tháng trong năm
+ *      + Trường hợp btnNgayHomQua => đối với tháng 1 vào ngày 1/1/nam => ketQuaBai5 = 31/12/ + (nam -1)
+ *      + Các trường hợp còn lại => ngay / thang / nam => (ngay -1) / thang /nam. Và nếu rơi vào ngày 1 hàng tháng => tùy vào tháng sẽ có các ngày 28 || 30 || 31 + thang -1 +nam
+ *      + Trường hợp btnNgayMai => đối với tháng 12 vào ngày 31/12/nam => ketQuaBai5 = 1/1 + (nam +1)
+ *      + các trường hợp còn lại => ngay / thang / nam => (ngay + 1) / thang / nam. Và nếu rơi vào các ngày cuối tháng như 28 || 30 || 31 => 1 / (thang + 1) /nam
+ *      + Các trường hợp nhập sai tháng => alert('vui lòng nhập đúng tháng')
+ * - Output:
+ *      + ketQuaBai5 = ?
+ */
 document.getElementById('btnNgayHomQua').onclick = function () {
     var ngay = Number(document.getElementById('ngay').value);
     var thang = Number(document.getElementById('thang').value);
@@ -240,6 +255,22 @@ document.getElementById('btnNgayMai').onclick = function () {
     document.getElementById('ketQuaBai5').innerHTML = ketQuaBai5;
 }
 
+/**
+ * Bài 6: Tính ngày
+ * Mô hình 3 khối:
+ * - Input: 
+ *      + inputThang: Number, inputNam: Number
+ * - Xử lý:
+ *      + Sử dụng switch case để xác định 12 tháng cụ thể   
+ *      + các tháng có 31 ngày: 1, 3, 5, 7, 8, 10, 12
+ *      + các tháng có 30 ngày: 4, 6, 9, 11
+ *      + trường hợp tháng 2 có 28 hoặc 29 ngày tùy năm nhuận:  
+ *          . Sử dụng if với điều kiện ((inputNam % 4 == 0 && inputNam % 100 !== 0) || inputNam %400 ==0) để xác định năm có 29 ngày 
+ *          . trường hợp còn lại là 28 ngày
+ * - Output:    
+ *      + ketQuaBai6 = ?
+ */
+
 document.getElementById('btnTinhNgay').onclick = function () {
     var inputThang = Number(document.getElementById('inputThang').value);
     var inputNam = Number(document.getElementById('inputNam').value);
@@ -292,6 +323,23 @@ document.getElementById('btnTinhNgay').onclick = function () {
     document.getElementById('ketQuaBai6').innerHTML = 'Tháng ' + inputThang + ' năm ' + inputNam + ' có ' + ketQuaBai6;
 
 }
+/**
+ * Bài 7: Đếm số
+ * Mô hình 3 khối:
+ * - Input:
+ *      + nhapSo: Number
+ * - Xử lý:
+ *      + Tách số nhập vào có 3 chữ số thành 3 phần: hangTram, hangChuc, donVi:
+ *          . Công thức:    
+ *              1. hangTram = Math.floor(nhapSo / 100)
+ *              2. hangChuc = Math.floor(nhapSo % 100 / 10);
+ *              3. donVi = nhapSo % 10;
+ *      + Sử dụng switch case cho từng thành phần được tách vì mỗi phần chỉ giới hạn 10 đơn vị, riêng hangTram giới hạn 9 đơn vị( trừ số 0)
+ * - Output: 
+ *      + ketQuaBai7 = hangTram + hangChuc + donVi
+ *      
+ */
+
 
 document.getElementById('btnDocSo').onclick = function () {
     var nhapSo = Number(document.getElementById('nhapSo').value);
@@ -405,6 +453,30 @@ document.getElementById('btnDocSo').onclick = function () {
     }
     document.getElementById('ketQuaBai7').innerHTML = 'Đọc: ' + hangTram + hangChuc + donVi;
 }
+
+
+/**
+ * Bài 8: Tìm sinh viên xa trường nhất
+ * Mô hình 3 khối:
+ * - Input:
+ *      + sinhVien1, sinhVien2, sinhVien3: String
+ *      + toaDoX1, toaDoX2, toaDoX3, toaDoX4: Number
+ *      + toaDoY1, toaDoY2, toaDoY3, toaDoY4: Number
+ * - Xử lý:
+ *      + Tính độ quãng cách đường đi của từng sinh viên = công thức căn bậc 2 của bình phương tọa độ X trường học - tọa độ X sinh viên cộng cho bình phương tọa độ Y trường học - tọa độ Y sinh viên => sử dụng Math.pow để tính bình phương và Math.sqrt để tính căn bậc 2
+ *  => var tinh? = Math.pow((toaDoX4 - toaDoX?),2) + Math.pow((toaDoY4- toaDoY?),2);
+ *  => var tinhSinhVien? = Math.sqrt(tinh?)
+ *      + Sau đó dùng if để tìm quãng đường nào xa nhất:    
+ *  => if(tinhSinhVien1 > tinhSinhVien2 && tinhSinhVien1 >tinhSinhVien3){
+        ketQuaBai8 = sinhVien1;
+    }else if(tinhSinhVien2 >tinhSinhVien1 && tinhSinhVien2 > tinhSinhVien3){
+        ketQuaBai8 = sinhVien2;
+    }else{
+        ketQuaBai8 = sinhVien3;
+    }
+    - Output:
+            + ketQuaBai8 = ?;
+ */
 
 document.getElementById('btnTim').onclick = function(){
     var toaDoX1 = Number(document.getElementById('toaDoX1').value);
